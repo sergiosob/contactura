@@ -23,3 +23,5 @@ describe('NotFoundComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
