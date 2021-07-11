@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import {  ReactiveFormsModule } from '@angular/forms';
+import {  FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -12,9 +12,10 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { FormContatosComponent } from './form-contatos/form-contatos.component';
 import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
 import { NotFoundComponent } from './sharedComponents/not-found/not-found.component';
-
+import { MatInputModule} from '@angular/material/input'; 
 import { MatCardModule} from '@angular/material/card'; 
 import { MatButtonModule} from '@angular/material/button'; 
+
 
 @NgModule({
   
@@ -29,11 +30,13 @@ import { MatButtonModule} from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

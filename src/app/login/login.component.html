@@ -1,26 +1,20 @@
 <mat-card class="example-card">
-	<mat-card-header>
-		<mat-card-title>Formulário de Contatos</mat-card-title>
-		<mat-card-subtitle>
-			Contactura
-		</mat-card-subtitle>
-	</mat-card-header>
-
-	<mat-card-content>
-		<p>
-			Aqui começa o corpo do Card
-		</p>
+		<mat-card-title class="container-logo">
+			<img src="../../assets/images/watermark1626004885.969135.png" alt="logo do site contactura">
+		</mat-card-title>
+		<mat-card-content>
+		<form class="example-form" [formGroup]="loginForm">
+			<mat-form-field class="example-full-width">
+				<mat-label>Username</mat-label>
+				<input type="email" matInput formControlName="username">
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<mat-label>Password</mat-label>
+				<input type="password" matInput formControlName="password">
+			</mat-form-field>
+		</form>
 	</mat-card-content>
-
-	<mat-card-actions>
-		<button mat-button style=
-			"background-color:blue; color:white">
-			LIKE
-		</button>
-
-		<button mat-button style=
-			"background-color:green; color:white">
-			SHARE
-		</button>
+	<mat-card-actions class="alignButtonsCenter">
+		<button mat-button (click)="login()">Entrar</button>
 	</mat-card-actions>
 </mat-card>
