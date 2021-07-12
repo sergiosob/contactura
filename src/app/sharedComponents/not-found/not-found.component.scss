@@ -51,7 +51,7 @@ main {
     &:nth-child(1) {
       opacity: 0;
       transform: translateZ(1000px);
-      animation: zoomFadeIn 5000ms $easeOutCubic forwards;
+      animation: zoomFadeIn 1000ms $easeOutCubic forwards;
       transform-origin: center center;
       .error-1-e {
         transform: translateX(-50%);

@@ -1,5 +1,5 @@
-
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-not-found',
@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  playAudio(){
+    let audio = new Audio();
+    audio.src = "../../../assets/audio/stranger-things-theme-song.mp3";
+    audio.load();
+    audio.play();
   }
 
+
+  constructor() { }
+
+  ngOnInit() {
+    this.playAudio();
+  }
 }

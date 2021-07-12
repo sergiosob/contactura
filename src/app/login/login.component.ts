@@ -13,16 +13,25 @@ export class LoginComponent implements OnInit {
       username: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required])
   });
-  
+
+  //playAudio(){
+  //  let audio = new Audio();
+  //  audio.src = "../../../assets/audio/Vivaldi4seasons.mp3";
+  // audio.load();
+  // audio.play();
+  //}
+ 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    //this.playAudio();
   }
 
   login(){
     if (this.loginForm.valid) {
       localStorage.setItem('token', 'coxinhanovaiorquina');
       this.router.navigate(['/lista-contato']);
+   
     }
   }
 }
