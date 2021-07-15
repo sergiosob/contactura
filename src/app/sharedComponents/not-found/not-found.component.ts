@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CarregarScriptsService } from '../../carregar-scripts.service';
 
 @Component({
   selector: 'app-not-found',
@@ -16,7 +16,10 @@ export class NotFoundComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor( private _CarregarScripts:CarregarScriptsService )
+   { 
+     _CarregarScripts.Carrega(["sound"]);
+   }
 
   ngOnInit() {
     this.playAudio();

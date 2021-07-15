@@ -4,6 +4,10 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import {  FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
+//inicio servico
+import { CarregarScriptsService } from "./carregar-scripts.service"
+//fim servico
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
@@ -38,7 +42,9 @@ import { MatButtonModule} from '@angular/material/button';
     MatButtonModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+    CarregarScriptsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
